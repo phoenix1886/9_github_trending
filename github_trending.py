@@ -27,7 +27,8 @@ def get_open_issues_amount(repo_owner, repo_name):
 
 
 if __name__ == '__main__':
-    trending_repos = get_trending_repositories(20)
+    projects_to_show = 20
+    trending_repos = get_trending_repositories(projects_to_show)
     for rank, repo in enumerate(trending_repos, 1):
         repo_name = repo['name']
         repo_owner = repo['owner']['login']
